@@ -1,0 +1,19 @@
+[Unit]
+Description=dhcpcd on all interfaces
+Wants=network.target
+Before=network.target
+
+StartLimitIntervalSec=300 # try starting again after 5 minutes if it failed
+StartLimitBurst=5 # stop after 5 attempts
+
+[Service]
+Type=forking
+PIDFile=/run/dhcpcd.pid
+ExecStart=dhcpcd -q -b
+ExecStop=dhcpcd -x
+
+Restart=on-failure # restart only on failure, not on user command
+RestartSec=60s # check every 60 seconds
+
+[Install]
+WantedBy=multi-user.target
