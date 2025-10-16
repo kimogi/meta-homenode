@@ -1,9 +1,9 @@
-# meta-pipump
-Yocto layer for garden pump on RPi. SSH, WiFi and GPIOs support.
+# meta-basenode
+Yocto layer for simple image with SSH, WiFi and libgpiod support.
 
-Use it together with meta-raspberrypi layer. Add the folowing to your `local.conf`
+Tested with `meta-raspberrypi` layer. Add the folowing to your `local.conf`
 
 ```
 MACHINE = "raspberrypi2"
-DISTRO = "pipump"
+DISTRO = "basenode"
 ```

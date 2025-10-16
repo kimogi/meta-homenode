@@ -1,9 +1,8 @@
-# pipump-image.bb
 LICENSE = "GPLv2"
 
 inherit core-image
 
-DESCRIPTION = "An image to run PiPump for Vertical Garden"
+DESCRIPTION = "Basenode image should autoconnect to WiFi and start sshd on boot"
 
 IMAGE_FEATURES += "ssh-server-openssh"
 
