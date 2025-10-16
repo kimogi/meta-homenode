@@ -12,5 +12,6 @@ IMAGE_INSTALL += " \
 	networkmanager \
 	linux-firmware \
 	libgpiod \
+	libgpiod-tools \
 	dhcpcd \
 "
