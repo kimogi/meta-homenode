@@ -3,7 +3,7 @@ inherit systemd
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE:${PN} = "dhcpcd.service"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 SRC_URI:append = " file://dhcpcd.service "
 FILES:${PN} += "${systemd_unitdir}/system/dhcpcd.service"
 

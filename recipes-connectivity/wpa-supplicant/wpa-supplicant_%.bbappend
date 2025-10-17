@@ -1,5 +1,5 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-SRC_URI_prepend := "\
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
+SRC_URI:prepend := "\
 	file://void_wpa_supplicant.conf \
 	file://nodbus-override.conf \
 	"
@@ -10,3 +10,5 @@ do_install:append() {
 	install -d ${D}${sysconfdir}/systemd/system/wpa_supplicant.service.d
 	install -m 600 ${WORKDIR}/nodbus-override.conf ${D}${sysconfdir}/systemd/system/wpa_supplicant.service.d/override.conf
 }
+
+SYSTEMD_AUTO_ENABLE = "enable"
