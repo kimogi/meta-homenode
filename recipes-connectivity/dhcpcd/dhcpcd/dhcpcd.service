@@ -8,8 +8,8 @@ StartLimitBurst=5 # stop after 5 attempts
 
 [Service]
 Type=forking
-PIDFile=/run/dhcpcd.pid
-ExecStart=dhcpcd -q -b
+PIDFile=/run/dhcpcd/wlan0.pid
+ExecStart=dhcpcd -q --hostname wlan0 -b
 ExecStop=dhcpcd -x
 
 Restart=on-failure # restart only on failure, not on user command
