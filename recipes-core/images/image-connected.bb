@@ -13,4 +13,7 @@ IMAGE_INSTALL += " \
 	libgpiod \
 	libgpiod-tools \
 	dhcpcd \
+	chrony \
+	chronyc \
+	tzdata \
 "
