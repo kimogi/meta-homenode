@@ -1,5 +1,5 @@
 # meta-anteater
-Distro layer for basic home node with SSH, WiFi and libgpiod support.
+Distro layer for basic home node like RPi hat with SSH, WiFi and libgpiod support.
 
 Tested with `meta-raspberrypi` layer. Add the folowing to your `local.conf`
 
